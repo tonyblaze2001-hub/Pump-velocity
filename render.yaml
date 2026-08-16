@@ -2,10 +2,11 @@ services:
   - type: web
     name: pump-velocity-mobile
     runtime: node
-    buildCommand: ""
+    plan: free
+    buildCommand: npm install
     startCommand: node server.js
     envVars:
       - key: NODE_VERSION
-        value: 22
+        value: "22"
       - key: HOST
         value: 0.0.0.0
